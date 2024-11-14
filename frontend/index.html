@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#000000" />
+    <meta name="description" content="IoT Sensor Dashboard" />
+    <title>IoT Sensor Dashboard</title>
+    <script src="https://cdn.socket.io/4.6.1/socket.io.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <div class="App">
+        <h1>IoT Sensor Dashboard</h1>
+        <div class="sensor-stream-container">
+            <div class="chart-container">
+                <canvas id="sensorChart"></canvas>
+            </div>
+            <div id="connectionStatus" class="connection-status">
+                Connecting to sensor stream...
+            </div>
+            <div id="debugInfo" class="debug-info">
+                Temperature points: 0 | Humidity points: 0
+            </div>
+        </div>
+    </div>
+    <script src="js/socketService.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>
